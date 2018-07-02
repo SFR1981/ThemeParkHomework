@@ -33,4 +33,8 @@ public class PlaygroundTest {
     public void notTooOldisAllowedTo(){
         assertEquals(true,playground.isAllowedTo(visitor2));
     }
+    @Test
+    public void canGetRating(){
+        assertEquals(0, playground.getRating());
+    }
 }

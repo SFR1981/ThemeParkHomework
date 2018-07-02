@@ -18,4 +18,9 @@ public class DodgemsTest {
     public void getName() {
         assertEquals("smashcars", dodgems.getName());
     }
+
+    @Test
+    public void canGetRating(){
+        assertEquals(0, dodgems.getRating());
+    }
 }
