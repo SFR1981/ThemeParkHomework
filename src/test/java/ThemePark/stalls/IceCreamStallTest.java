@@ -28,4 +28,10 @@ public class IceCreamStallTest {
     public void getParkingSpot() {
         assertEquals("close to the drains", iceCreamStall.getParkingSpot());
     }
+
+    @Test
+
+    public void getTicketPrice(){
+        assertEquals(2.80 , iceCreamStall.defaultPrice(), 0);
+    }
 }
