@@ -7,44 +7,66 @@ import java.util.ArrayList;
 public class ThemePark {
     ArrayList<Attraction> attractions;
     ArrayList<Stall> stalls;
-    ArrayList<IReviewed> iRevieweds;
-    ArrayList<ISecurity> iSecurities;
     String name;
 
     public ThemePark(String name){
         this.attractions = new ArrayList<>();
         this.stalls = new ArrayList<>();
-        this.iRevieweds = new ArrayList<>();
         this.name = name;
-        this.iSecurities = new ArrayList<>();
+
+    }
+
+
+    public void addAttraction(Attraction attraction){
+        attractions.add(attraction);
+    }
+
+    public void addStall(Stall stall){
+        stalls.add(stall);
+    }
+
+    public int getAttractions(){
+        return this.attractions.size();
+    }
+
+    public int getStalls(){
+        return this.stalls.size();
     }
 
 
 
-
-    public void visit(Visitor visitor, Attraction attraction){
+    public String visit(Visitor visitor, Attraction attraction){
+        return attraction.getName() + "has been visited";
 
 
 
     }
 
     public ArrayList<IReviewed> getiRevieweds() {
-        return iRevieweds;
+        ArrayList<IReviewed> reviews = new ArrayList<>();
+        reviews.addAll(attractions);
+        reviews.addAll(stalls);
+        return reviews;
     }
 
-    public void addtolist(ISecurity attraction){
-        iSecurities.add(attraction);
-    }
 
-    public ArrayList<ISecurity> getAllowed(Visitor visitor){
-        ArrayList<ISecurity> allowed = new ArrayList<>();
-        for (ISecurity iSecurity: this.iSecurities){
-            if (iSecurity.isAllowedTo(visitor)){
-                allowed.add(iSecurity);
+
+
+    public ArrayList<ITicketed> getAllAllowedFor(Visitor visitor){
+        ArrayList<ITicketed> allAllowed = new ArrayList<>();
+        for (IReviewed reviewable : this.getiRevieweds()){
+            if (reviewable instanceof ITicketed){
+                if (reviewable instanceof ISecurity){
+                    if (((ISecurity) reviewable).isAllowedTo(visitor)){
+                        allAllowed.add((ITicketed) reviewable);
+
+                    }
+                }else{
+                    allAllowed.add((ITicketed) reviewable);
+                }
             }
         }
-        return allowed;
-
+        return allAllowed;
     }
 
 

@@ -24,9 +24,6 @@ public class Visitor {
         return this.money;
     }
 
-    public boolean canRide(ISecurity){
-
-    }
 
 
 }
