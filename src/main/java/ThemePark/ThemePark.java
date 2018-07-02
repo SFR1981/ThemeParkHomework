@@ -69,6 +69,15 @@ public class ThemePark {
         return allAllowed;
     }
 
+    public String getAllReviews(){
+        ArrayList<String> allReviews  = new ArrayList<>();
+        for (IReviewed reviewable : this.getiRevieweds()){
+            String review = reviewable.getName() + " : " + reviewable.getRating();
+            allReviews.add(review);
+        }
+        return String.join( ", ", allReviews);
+    }
+
 
 
 

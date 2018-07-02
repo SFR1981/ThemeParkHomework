@@ -13,7 +13,7 @@ public class DodgemsTest {
 
     @Before
     public void setUp() throws Exception {
-        dodgems = new Dodgems("smashcars");
+        dodgems = new Dodgems("smashcars", 3);
         visitor = new Visitor(6, 100, 9.00);
     }
 
@@ -24,7 +24,7 @@ public class DodgemsTest {
 
     @Test
     public void canGetRating(){
-        assertEquals(0, dodgems.getRating());
+        assertEquals(3, dodgems.getRating());
     }
 
     @Test

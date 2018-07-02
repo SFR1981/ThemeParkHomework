@@ -6,8 +6,8 @@ import ThemePark.Visitor;
 
 public class TobaccoStall extends Stall implements ISecurity{
 
-    public TobaccoStall(String name, String ownerName, String parkingSpot) {
-        super(name, ownerName, parkingSpot);
+    public TobaccoStall(String name, String ownerName, String parkingSpot, int rating) {
+        super(name, ownerName, parkingSpot, rating);
     }
 
     @Override

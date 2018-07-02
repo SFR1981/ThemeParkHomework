@@ -8,11 +8,11 @@ public abstract class Stall implements IReviewed, ITicketed{
     String parkingSpot;
     int rating;
 
-    public Stall(String name, String ownerName, String parkingSpot){
+    public Stall(String name, String ownerName, String parkingSpot, int rating){
         this.name = name;
         this.ownerName = ownerName;
         this.parkingSpot = parkingSpot;
-        this.rating = 0;
+        this.rating = rating;
     }
 
     public String getName(){

@@ -14,7 +14,7 @@ public class PlaygroundTest {
 
     @Before
     public void before() {
-        playground = new Playground("PlayDays");
+        playground = new Playground("PlayDays", 6);
         visitor = new Visitor(16, 100, 4.00);
         visitor2 = new Visitor(12, 100, 4.00);
     }
@@ -35,6 +35,6 @@ public class PlaygroundTest {
     }
     @Test
     public void canGetRating(){
-        assertEquals(0, playground.getRating());
+        assertEquals(6, playground.getRating());
     }
 }

@@ -6,8 +6,8 @@ import ThemePark.ITicketed;
 import ThemePark.Visitor;
 
 public class Rollercoaster extends Attraction implements ISecurity, ITicketed{
-    public Rollercoaster(String name) {
-        super(name);
+    public Rollercoaster(String name, int rating) {
+        super(name, rating);
     }
 
     @Override

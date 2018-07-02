@@ -14,7 +14,7 @@ public class TobaccoStallTest {
 
     @Before
     public void before(){
-        tobaccoStall = new TobaccoStall("Sir Smokealot", "Marting Pipes", "near the bins");
+        tobaccoStall = new TobaccoStall("Sir Smokealot", "Marting Pipes", "near the bins", 7);
         visitor = new Visitor(14, 100, 7.00);
         visitor2 = new Visitor( 19, 200, 14.00);
     }
@@ -46,6 +46,6 @@ public class TobaccoStallTest {
 
     @Test
     public void canGetRating(){
-        assertEquals(0, tobaccoStall.getRating());
+        assertEquals(7, tobaccoStall.getRating());
     }
 }

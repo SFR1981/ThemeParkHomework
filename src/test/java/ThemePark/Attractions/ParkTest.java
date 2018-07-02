@@ -11,7 +11,7 @@ public class ParkTest {
 
     @Before
     public void setUp() throws Exception {
-        park = new Park("park");
+        park = new Park("park", 1);
     }
 
     @Test
@@ -21,6 +21,6 @@ public class ParkTest {
 
     @Test
     public void canGetRating(){
-        assertEquals(0, park.getRating());
+        assertEquals(1, park.getRating());
     }
 }
