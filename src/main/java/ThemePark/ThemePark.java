@@ -6,17 +6,20 @@ public class ThemePark {
     ArrayList<Attraction> attractions;
     ArrayList<Stall> stalls;
     ArrayList<IReviewed> iRevieweds;
+    String name;
 
-    public ThemePark(){
+    public ThemePark(String name){
         this.attractions = new ArrayList<>();
         this.stalls = new ArrayList<>();
         this.iRevieweds = new ArrayList<>();
+        this.name = name;
     }
 
 
 
 
     public void visit(Visitor visitor, Attraction attraction){
+
 
 
     }

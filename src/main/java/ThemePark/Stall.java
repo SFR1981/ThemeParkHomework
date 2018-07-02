@@ -1,6 +1,6 @@
 package ThemePark;
 
-public abstract class Stall implements IReviewed{
+public abstract class Stall implements IReviewed, ITicketed{
 
 
     String name;
